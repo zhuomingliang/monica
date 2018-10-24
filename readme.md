@@ -11,6 +11,8 @@
 <a class="badge-align" href="https://slack.monicahq.com"><img src="https://slack.monicahq.com/badge.svg"></a>
 </p>
 
+[![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/monicahq/monica/master/scripts/docker/docker-compose-pwd.yml)
+
 Monica is a great open source personal relationship management system.
 
 * [Introduction](#introduction)

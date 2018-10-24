@@ -1,0 +1,31 @@
+version: "2"
+services:
+  monicahq:
+    image: monicahq/monicahq
+    depends_on:
+      - mysql
+    ports:
+      - 80:80
+    networks:
+      - database:
+    volumes:
+      - monica_data:/var/www/monica/storage
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=sekret_root_password
+      - MYSQL_DATABASE=forge
+      - MYSQL_USER=forge
+      - MYSQL_PASSWORD=
+    networks:
+      - database:
+    volumes:
+      - monica_mysql:/var/lib/mysql
+
+networks:
+  database:
+
+volumes:
+  monica_data:
+  monica_mysql:
