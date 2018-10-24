@@ -6,8 +6,6 @@ services:
       - mysql
     ports:
       - 80:80
-    networks:
-      - database:
     volumes:
       - monica_data:/var/www/monica/storage
 
@@ -18,13 +16,8 @@ services:
       - MYSQL_DATABASE=forge
       - MYSQL_USER=forge
       - MYSQL_PASSWORD=
-    networks:
-      - database:
     volumes:
       - monica_mysql:/var/lib/mysql
-
-networks:
-  database:
 
 volumes:
   monica_data:
